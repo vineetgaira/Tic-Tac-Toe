@@ -1,7 +1,17 @@
+import colorama
+from colorama import Fore, Style
+colorama.init(autoreset=True)
+
 def welcome():
-    print("Welome to Tic-Tac-Toe\n" \
-    "Players get 'X' or 'O' at random.\n" \
-    "You can play with someone or with computer.")
+    print(Style.BRIGHT+Fore.RED+r"""
+  T I C   T A C   T O E 
+ -------+-------+-------
+    T   |   T   |   T   
+ -------+-------+-------
+    I   |   A   |   O   
+ -------+-------+-------
+    C   |   C   |   E   
+""")
 
 def show_menu():
     pass
