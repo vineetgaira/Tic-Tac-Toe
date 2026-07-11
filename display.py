@@ -14,7 +14,9 @@ def welcome():
 """)
 
 def show_menu():
-    pass
+    print(Fore.BLUE+"Welcome to Tic-Tac-Toe....\n" \
+    "You have to enter row and column to put the symbol there.\n" \
+    "If three of the symbols are same in a row, column, or diagonal you win.")
 
 def show_winner():
     pass
@@ -29,3 +31,4 @@ def goodbye():
     pass
 
 welcome()
+show_menu()
