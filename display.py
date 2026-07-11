@@ -1,5 +1,7 @@
 def welcome():
-    pass
+    print("Welome to Tic-Tac-Toe\n" \
+    "Players get 'X' or 'O' at random.\n" \
+    "You can play with someone or with computer.")
 
 def show_menu():
     pass
@@ -15,3 +17,5 @@ def show_turn():
 
 def goodbye():
     pass
+
+welcome()
