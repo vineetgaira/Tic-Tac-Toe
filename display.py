@@ -3,7 +3,7 @@ from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 def welcome():
-    print(Style.BRIGHT+Fore.RED+r"""
+    print(Style.BRIGHT+Fore.BLUE+r"""
   T I C   T A C   T O E 
  -------+-------+-------
     T   |   T   |   T   
