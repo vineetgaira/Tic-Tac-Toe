@@ -11,9 +11,12 @@ def check_rows(board,player):
 
 
 def check_col(board,player):
-    pass
-
-def check_diagonal():
+    
+    for i in range(BOARD_SIZE):
+        if all(board[j][i]==player for j in range(BOARD_SIZE)):
+            return True
+    
+def check_diagonal(board):
     pass
 
 def check_winner():
@@ -27,3 +30,5 @@ def switch_user():
 
 def game_over():
     pass
+    
+    
