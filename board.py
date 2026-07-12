@@ -26,14 +26,14 @@ def position_empty(board, row ,col):
     return board[row][col] == " "
 
 def board_full(board):
-
 #This checks if the board is full or not. 
 #It takes me time to even write correct for loops.
-
     for row in board:
         for  cell in row:
            if cell  == " ":
                return False
     else:
-        return True
-        
+        return 
+        True
+
+

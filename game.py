@@ -1,5 +1,4 @@
 from constants import BOARD_SIZE
-from board import position_empty
 
 def play_game():
     pass
@@ -34,7 +33,7 @@ def check_winner(board,player):
     
 def check_draw(board):
    
-# This will check the draw I still don't know how to write these independently.
+# This will check the draw I still don't know how to write these by my own.
    return all(col != " " for row in board for col in row)
 
 def switch_user():
