@@ -33,7 +33,7 @@ def board_full(board):
            if cell  == " ":
                return False
     else:
-        return 
-        True
+        return True
+        
 
 
