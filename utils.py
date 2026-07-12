@@ -18,6 +18,6 @@ def play_again():
         else:
             print(Fore.RED+"Please enter y/n.")
 
-play_again()
+
 
 

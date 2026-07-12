@@ -19,14 +19,14 @@ def show_menu():
     "If three of the symbols are same in a row, column, or diagonal you win.")
 
 def show_winner(winner):
-    print(Fore.GREEN+f"Congratulations! {Fore.MAGENTA+winner} Wins.")
+    print(Fore.GREEN+f"Congratulations! {winner} Wins.")
 
 def show_draw():
     print(Fore.GREEN+"It's a tie!")
 
 def show_turn(player):
-    print(Fore.CYAN+f"It's {Fore.MAGENTA+player}'s turn.")
+    print(Fore.CYAN+f"It's {player}'s turn.")
 
 def goodbye():
-    print(Fore.CYAN+"Thanks for playing the gam...")
+    print(Fore.CYAN+"Thanks for playing the game...")
 
