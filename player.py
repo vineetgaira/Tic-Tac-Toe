@@ -23,8 +23,3 @@ def get_player_move(board):
             print("Please enter a valid integer.")
             continue
 
-
-def switch_player():
-    pass
-board = create_board()
-get_player_move(board)
