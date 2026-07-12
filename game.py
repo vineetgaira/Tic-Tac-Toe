@@ -1,4 +1,5 @@
 from constants import BOARD_SIZE
+from board import position_empty
 
 def play_game():
     pass
@@ -25,11 +26,16 @@ def check_diagonal(board,player):
     
     return False
 
-def check_winner():
-    pass
-
-def check_draw():
-    pass
+def check_winner(board,player):
+# This will produce a winner
+    if check_rows(board,player) or check_col(board,player) or check_diagonal(board,player):
+        return True
+        
+    
+def check_draw(board):
+   
+# This will check the draw I still don't know how to write these independently.
+   return all(col != " " for row in board for col in row)
 
 def switch_user():
     pass
