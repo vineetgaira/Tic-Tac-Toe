@@ -28,3 +28,9 @@ def get_player_move(board):
             continue
         return row, col
 
+def game_mode():
+    while True:
+        choice = input(Fore.BLUE+"Choose mode : (1) Player v/s Player (2) Player v/s Computer: ").strip()
+        if choice in ("1","2"):
+            return choice
+        print(Fore.RED+"Please enter 1 or 2.")

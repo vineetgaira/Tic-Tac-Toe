@@ -1,11 +1,11 @@
-import os
+
 import colorama
 from colorama import Fore
 colorama.init(autoreset=True)
 
 def clear_screen():
 
-    os.system('cls' if os.name == 'nt' else 'clear')
+        print("\033[H\033[J", end="")
 
 def play_again():
 

@@ -1,10 +1,11 @@
 from board import create_board, display_board, place_mark
 from game import check_winner ,check_draw, switch_player
 from display import welcome, show_menu, show_winner, show_draw, show_turn, goodbye
-from player import get_player_move
+from player import get_player_move, game_mode
+from ai import easy_move
 from utils import clear_screen, play_again
 
-def play_round():
+def play_round(vs_ai):
 # This is the main game loop.
 
     board=create_board()
@@ -15,7 +16,11 @@ def play_round():
         welcome()
         display_board(board)
         show_turn(current_player)
-        row,col=get_player_move(board)
+
+        if vs_ai and current_player=="O":
+            row, col=easy_move(board)
+        else:
+            row,col=get_player_move(board)
         place_mark(board,row,col,current_player)
 
         if check_winner(board,current_player):
@@ -32,8 +37,9 @@ def play_round():
 
 def main():
     show_menu()
+    vs_ai=game_mode()=="2"
     while True:
-        play_round()
+        play_round(vs_ai)
         if not play_again():
             break
     goodbye()
