@@ -1,6 +1,7 @@
 import colorama
 from colorama import Fore
-from board import create_board
+from board import position_empty
+from constants import BOARD_SIZE
 colorama.init(autoreset=True)
 
 def get_player_move(board):
@@ -14,18 +15,16 @@ def get_player_move(board):
 
             row, col = int(move[0]), int(move[1])
 
-            if row not in range(3) or col not in range(3):
+            if row not in range(BOARD_SIZE) or col not in range(BOARD_SIZE):
                 print(Fore.RED+"Please enter a valid number!")
                 continue
             
-            if board[row][col] != " ":
+            if not position_empty(board,row,col):
                 print(Fore.RED+"That place is already taken.")
                 continue
 
         except ValueError:
             print(Fore.RED+"Please enter a valid integer.")
             continue
-        break
+        return row, col
 
-board=create_board()
-get_player_move(board)
