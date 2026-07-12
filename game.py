@@ -44,9 +44,4 @@ def switch_user(player):
     else:
         return "X"
 
-  
-
-def game_over():
-    pass
-    
     
