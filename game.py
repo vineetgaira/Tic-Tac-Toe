@@ -36,8 +36,15 @@ def check_draw(board):
 # This will check the draw I still don't know how to write these by my own.
    return all(col != " " for row in board for col in row)
 
-def switch_user():
-    pass
+def switch_user(player):
+# This will switch users
+    if player=="X":
+        player="O"
+        return player
+    else:
+        return "X"
+
+  
 
 def game_over():
     pass
